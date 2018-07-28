@@ -1,5 +1,6 @@
 .title-box {
     margin: auto;
+    margin-top: 10px;
     width: 50%;
     border: 1px solid;
     text-align: center;
@@ -8,13 +9,51 @@
 
 .instructions {
     margin: auto;
+    margin-bottom: 10px;
     width: 70%;
     border: 1px solid;
     text-align: center;
     font-size: 20px;
 }
 
+.random-number-display {
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 10px 125px;
+    border: 1px solid;
+    padding: 100px 100px;
+    float: left;
+    font-size: 40px;
+}
+
+.wins-losses {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid;
+    padding: 85px 100px 115px 100px;
+    float: left;
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px;
+}
+
 .gem-image {
     width: 100px;
     height: 100px;
+}
+
+.score-indicator-text {
+    float: left;
+}
+
+.player-score {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 40px;
+    float: left;
 }
