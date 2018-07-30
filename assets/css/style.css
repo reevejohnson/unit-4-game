@@ -16,24 +16,30 @@
     font-size: 20px;
 }
 
-.random-number-display {
-    width: 50px;
-    height: 50px;
-    margin: 10px 10px 10px 125px;
+.computer-number-box {
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px 10px 115px;
     border: 1px solid;
-    padding: 100px 100px;
     float: left;
+}
+
+.computer-number-display {
+    padding: 85px 100px 115px 110px;
     font-size: 40px;
 }
 
-.wins-losses {
-    width: 50px;
-    height: 50px;
+.score-box {
+    width: 250px;
+    height: 250px;
     margin: 10px;
     border: 1px solid;
-    padding: 85px 100px 115px 100px;
     float: left;
-    text-align: center;
+}
+
+.player-score {
+    padding: 85px 100px 115px 115px;
+    font-size: 40px;
 }
 
 .buttons {
@@ -43,17 +49,4 @@
 .gem-image {
     width: 100px;
     height: 100px;
-}
-
-.score-indicator-text {
-    float: left;
-}
-
-.player-score {
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
-    text-align: center;
-    font-size: 40px;
-    float: left;
 }
