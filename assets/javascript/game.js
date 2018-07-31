@@ -39,10 +39,42 @@ $(document).ready(function() {
     $(".yellow-gem").attr("value", yellowGemValue);
     $(".green-gem").attr("value", greenGemValue);
 
+    function reset() {
+        $(".computer-number-display").text("");
+        randomNumber = Math.floor(Math.random() * (102)) + 19;
+        $(".computer-number-display").text(randomNumber);
+
+        playerScore = 0;
+
+        shuffleArray(randomValues);
+
+        redGemValue = randomValues[0];
+        blueGemValue = randomValues[1];
+        yellowGemValue = randomValues[2];
+        greenGemValue = randomValues[3];
+
+        $(".red-gem").attr("value", redGemValue);
+        $(".blue-gem").attr("value", blueGemValue);
+        $(".yellow-gem").attr("value", yellowGemValue);
+        $(".green-gem").attr("value", greenGemValue);
+    }
+
     $(".gem-button").click(function() {
+        $(".instructions").html("<p>You will be give a random number at the start of the game.</p><br><p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p><br><p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p><br><p>The value of each crystal is hidden from you until you click on it.</p><br><p>Each time when the game starts, the game will change the values of each crystal.</p>");
         var buttonValue = $(this).attr("value");
         var newScore = playerScore + parseInt(buttonValue);
         playerScore = newScore;
         $(".player-score").text(playerScore);
+        if(randomNumber === playerScore) {
+            $(".instructions").append("<br>You win! Click any gem to start working towards the new number in the box.")
+            winCounter++;
+            $(".win-number").text(winCounter);
+            reset();
+        } else if(randomNumber < playerScore) {
+            $(".instructions").append("<br><br>You lose. Click any gem to start working towards the new number in the box.")
+            lossCounter++;
+            $(".loss-number").text(lossCounter);
+            reset();
+        }
     })
 });
